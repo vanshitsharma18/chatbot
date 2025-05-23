@@ -60,7 +60,7 @@ python main.py
 
 ## License
 
-MIT
+ Vanshit Sharma 2025
 
 ## Contributing
 
