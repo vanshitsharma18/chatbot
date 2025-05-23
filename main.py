@@ -1,23 +1,18 @@
-import google.generativeai as genai
+# main.py
 from config import load_api_key
+import google.generativeai as genai
 
 def chat_with_gemini():
-    # Load API key and configure the client
     load_api_key()
-    genai.configure(api_key=genai.api_key)
-
-    # Create a model instance
-    model = genai.GenerativeModel('gemini-1.5-flash')  # Faster, limited capabilities
+    model = genai.GenerativeModel('gemini-1.0-pro')  # Use supported model
     chat = model.start_chat()
 
     print("🤖 Gemini Chatbot (type 'exit' to quit)\n")
-
     while True:
         user_input = input("You: ")
-        if user_input.lower() in ["exit", "quit"]:
-            print("Goodbye! 👋")
+        if user_input.lower() in ['exit', 'quit']:
+            print("Goodbye!")
             break
-
         try:
             response = chat.send_message(user_input)
             print("Gemini:", response.text)
