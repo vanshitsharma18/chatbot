@@ -1,1 +1,5 @@
 .env
+.gitattributes
+_pycache_
+__pycache__/
+.gitignore
