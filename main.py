@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 def chat_with_gemini():
     load_api_key()
-    model = genai.GenerativeModel('gemini-1.0-pro')  # Use supported model
+    model = genai.GenerativeModel('gemini-1.5-flash')  # Faster, limited capabilities
     chat = model.start_chat()
 
     print("🤖 Gemini Chatbot (type 'exit' to quit)\n")
